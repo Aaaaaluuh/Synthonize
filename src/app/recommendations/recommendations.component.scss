@@ -1,0 +1,81 @@
+body {
+  background-color: #F6FEF0; /* Flat background color */
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: medium;
+}
+
+main {
+  margin-left: 25%;
+  margin-right: 25%;
+  color: #778c77;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center content */
+  padding: 0 20px;
+  height: 13vh;
+  margin-top: 2%;
+  background-color: #F6FEF0; /* Optional background color */
+  /* border-bottom: 1px solid #ccc; /* Optional bottom border */
+}
+
+
+
+.logo-container-normal {
+  display: flex;
+  align-items: center; /* Align the logo and text vertically */
+  gap: 10px; /* Space between images */
+  margin-right: 25%;
+}
+
+.logo-name-container {
+  display: flex;
+  flex-direction: column; /* Stack name and slogan vertically */
+  align-items: flex-start; /* Align items (name and slogan) to the left */
+}
+
+.logo-name {
+  width: 120px; /* Fixed width for the "Synthonize" image */
+  height: auto;
+}
+
+.tiny-slogan {
+  font-family: 'Nunito', sans-serif;
+  color: #144D14; /* Match color with design */
+  font-size: small; /* Adjust size as needed */
+  margin: 5px 0 0 0; /* Add space between the name and slogan */
+  text-align: left; /* Align text to the left */
+  /* max-width: 120px; Match the width of the "Synthonize" image */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  overflow: hidden; /* Hide overflow if the text is too long */
+  text-overflow: ellipsis; /* Add ellipsis if the text is truncated */
+}
+
+
+.logo-image {
+  width: 35%; /* Adjust width as needed */
+  height: auto;
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #144D14;
+  font-size: medium;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #0f3a10;
+}

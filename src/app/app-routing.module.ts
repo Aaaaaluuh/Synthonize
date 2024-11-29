@@ -7,7 +7,8 @@ import { MultiselectComponent } from './multiselect/multiselect.component';
 const routes: Routes = [
   {
     path: '',
-    component: FirstPageComponent
+    component: FirstPageComponent,
+    pathMatch:"full"
   },
   {
     path: 'recommendations',
