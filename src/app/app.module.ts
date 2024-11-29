@@ -8,7 +8,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { FormsModule } from '@angular/forms';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
-import { RecommendationsComponent } from './recommendations/recommendations/recommendations.component';
+import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { NavBarComponent } from './nav/nav-bar/nav-bar.component';
 import { LayoutComponent } from './layout/layout/layout.component';
 
