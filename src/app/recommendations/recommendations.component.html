@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Synthonize</title>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
+    </head>
+    <body>
+        <header class="header-container">
+            <div class="logo-container-normal">
+               <img src="assets/images/logoNormal.png" alt="Logo" class="logo-image">
+                <div class="logo-name-container">
+                    <img src="assets/images/Synthonize.png" alt="Synthonize" class="logo-name">
+                    <p class="tiny-slogan">Sintonizando sua mente com sua música</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Em breve</a></li>
+                    <li><a href="#">Em breve</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Recomendations</h1>
+            <div style="width: 30%; display: center;">
+                <ng-multiselect-dropdown
+                [placeholder]="'custom placeholder'"
+                [settings]="dropdownSettings"
+                [data]="dropdownList"
+                [(ngModel)]="selectedItems"
+                (onSelect)="onItemSelect($event)"
+                (onSelectAll)="onSelectAll($event)"
+                >
+                </ng-multiselect-dropdown>
+            </div>
+        </main>
+    </body>
+</html>
