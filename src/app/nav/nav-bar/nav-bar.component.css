@@ -1,9 +1,4 @@
-body {
-  background-color: #F6FEF0; /* Flat background color */
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-  font-size: medium;
-}
+
 
 main {
   margin-left: 25%;
@@ -12,12 +7,13 @@ main {
 }
 
 .header-container {
+
   display: flex;
   justify-content: center;
   align-items: center; /* Vertically center content */
   padding: 0 20px;
   height: 13vh;
-  margin-top: 2%;
+
   background-color: #F6FEF0; /* Optional background color */
   /* border-bottom: 1px solid #ccc; /* Optional bottom border */
 }

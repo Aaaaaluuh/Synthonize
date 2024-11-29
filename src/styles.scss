@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+html, body {
+  min-height: 100vh;
+  height: auto;
 
-/* Body styles */
+  background-color: #F6FEF0; /* Cor de fundo similar à imagem */
+  margin: 0;
+}
