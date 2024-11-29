@@ -23,19 +23,28 @@
                 </ul>
             </nav>
         </header>
+        <br>
         <main>
-            <h1>Recomendations</h1>
-            <div style="width: 30%; display: center;">
-                <ng-multiselect-dropdown
-                [placeholder]="'custom placeholder'"
-                [settings]="dropdownSettings"
-                [data]="dropdownList"
-                [(ngModel)]="selectedItems"
-                (onSelect)="onItemSelect($event)"
-                (onSelectAll)="onSelectAll($event)"
-                >
-                </ng-multiselect-dropdown>
-            </div>
+            <h1>Recomenadações</h1>
+            <p>Selecione até 5 gêneros musicais:</p>
+            <ng-multiselect-dropdown
+            [placeholder]="'custom placeholder'"
+            [settings]="dropdownSettings"
+            [data]="dropdownList"
+            [(ngModel)]="selectedItems"
+            (onSelect)="onItemSelect($event)"
+            (onSelectAll)="onSelectAll($event)"
+            >
+            </ng-multiselect-dropdown>
+            <br>
+            <p>Selecione as features:</p>
+            <p>Dançabilidade:</p>
+            <input type="range" min="0" max="100" value="50">
+            <p>Instrumentalidade:</p>
+            <input type="range" min="0" max="100" value="50">
+            <p>Velência:</p>
+            <input type="range" min="0" max="100" value="50">
+            <button>Gerar Recomendação</button>
         </main>
     </body>
 </html>
