@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { MultiselectComponent } from './multiselect/multiselect.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { FormsModule } from '@angular/forms';
-import { FirstPageComponent } from './first-page/first-page.component'; 
+import { FirstPageComponent } from './first-page/first-page.component';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
+import { NavBarComponent } from './nav/nav-bar/nav-bar.component';
+import { LayoutComponent } from './layout/layout/layout.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { RecommendationsComponent } from './recommendations/recommendations.comp
     AppComponent,
     MultiselectComponent,
     FirstPageComponent,
-    RecommendationsComponent
+    RecommendationsComponent,
+    NavBarComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

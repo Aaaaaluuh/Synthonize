@@ -1,0 +1,111 @@
+
+
+/* Body styles */
+
+
+.main-page {
+    background: linear-gradient(45deg, #E1FF9F, #F6FEF0);
+    /* 45 degrees makes it diagonal */
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: medium;
+}
+
+/* Container styles */
+.container-home {
+    position: relative; /* Set relative positioning for the container */
+    width: 90%; /* Width of the container */
+    height: 90vh; /* Height of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5vh;
+    bottom: 0;
+}
+
+/* SVG Image */
+.background-logo-border {
+    width: 1200px; /* Size of the SVG */
+    height: auto;
+    bottom: 0;
+}
+
+/* Overlay content (text and other image) */
+.overlay-content {
+    position: absolute; /* Allow positioning of child elements relative to container */
+    top: 65%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    color: #144D14; /* Text color */
+}
+
+/* Additional image in the overlay */
+.overlay-image {
+    width: 100%; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15%;
+}
+
+.slogan {
+    font-family: 'Nunito', sans-serif;
+    color: #144D14;
+    font-size: x-large;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Button group container */
+.button-container {
+    display: flex; /* Align buttons side by side */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 30%; /* Add space between buttons */
+    margin-top: 10vh; /* Add space above the buttons */
+}
+
+/* General button styles */
+.login-button {
+    display: flex; /* Align content within the button */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 10px 20px; /* Add padding inside buttons */
+    font-family: 'Nunito', sans-serif; /* Match the font with the page */
+    font-size: medium;
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 150px; /* Ensure both buttons are the same size */
+    height: 50px;
+}
+
+/* Spotify button styles */
+.spotify-button {
+    background-color: #6BC819;
+    color: #144D14; /* Text color */
+}
+
+.spotify-button .button-icon {
+    width: 28px; /* Adjust logo size */
+    height: auto;
+    margin-right: 6px; /* Space between logo and text */
+}
+
+
+/* Button hover effect */
+.login-button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: 0.4s;
+}
+
+/* Button active effect */
+.login-button:active {
+    transform: scale(1); /* Reset scale */
+    opacity: 0.9; /* Dim slightly */
+}
