@@ -9,6 +9,7 @@ import { IDropdownSettings } from 'ng-multiselect-dropdown';
 })
 
 export class RecommendationsComponent implements OnInit {
+  showMoreInfo: boolean = false; // Initially set to false
   dropdownList: { item_id: number; item_text: string }[] = []; // Specify the type
   selectedItems: { item_id: number; item_text: string }[] = [];
   dropdownSettings: IDropdownSettings = {}; // Type is already defined by the library
@@ -41,4 +42,13 @@ export class RecommendationsComponent implements OnInit {
   onSelectAll(items: any) {
     console.log(items);
   }
+
+
+  onGenerateRecommendation() {
+    this.showMoreInfo = true; // Toggle or set the variable to true
+  }
+  
 }
+
+
+

@@ -1,5 +1,4 @@
 .container-recommendation {
-
   display: flex;
   flex-direction: column;
   align-items: center; /* Centraliza os itens dentro do container */
@@ -20,4 +19,156 @@ h1 {
   width: 50%; /* Ajusta a largura do dropdown */
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #144D14; /* Cor do título */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+input[type=range] {
+  appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #144D14;
+  border-radius: 1.3px;
+  border: 0.1px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0.5px 0.5px 0.5px #000000, 0px 0px 0.5px #0d0d0d;
+  border: 1px solid #000000;
+  height: 26px;
+  width: 10px;
+  border-radius: 5px;
+  background: #6BC819;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+
+.generate-button {
+  float: right; 
+  display: flex; 
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  padding: 10px 20px; /* Add padding inside buttons */
+  font-family: 'Nunito', sans-serif; /* Match the font with the page */
+  font-size: 1em;
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 150px; /* Ensure both buttons are the same size */
+  height: 50px;
+  background-color: #6BC819;
+  color: #144D14;
+  margin-top: 20px;
+  clear: both;
+}
+
+.additional-info {
+  margin-top: 20px; /* Adds spacing above the div */
+  clear: both; /* Ensures it clears any floated elements */
+}
+
+
+.additional-info ul {
+  list-style-type: none; /* Removes the default marker */
+  padding: 0; /* Removes default padding for the list */
+}
+
+.additional-info li {
+  border: 1px solid #ccc; /* Adds a border to each list item */
+  border-radius: 8px; /* Optional: Rounded corners */
+  padding: 10px; /* Adds space inside each item */
+  margin-bottom: 10px; /* Adds spacing between items */
+  background-color: #f6faf3; /* Optional: Light background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+
+.artist-name {
+  font-size:small;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #f6faf3;
+}
+
+.features-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.info-button-container {
+  position: relative; /* Important for tooltip positioning */
+}
+
+.info-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #6BC819;
+  color: white;
+  border: none;
+  border-radius: 25%; 
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.info-button:hover {
+  background-color: #57a715; /* Darker background on hover */
+}
+
+.tooltip {
+  visibility: hidden; /* Default: hidden */
+  opacity: 0; /* Default: transparent */
+  position: absolute;
+  bottom: 30px; /* Positioned above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333; /* Dark background */
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px; /* Rounded corners */
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1; /* Ensure it's above other elements */
+  transition: opacity 0.3s ease; /* Smooth fade-in/out */
+}
+
+.info-button-container:hover .tooltip {
+  visibility: visible; /* Show tooltip on hover */
+  opacity: 1; /* Fade in */
+}
+
+
+.feature-name {
+  margin-top: 10px;
 }

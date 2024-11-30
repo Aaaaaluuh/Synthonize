@@ -20,7 +20,7 @@ import { LayoutComponent } from './layout/layout/layout.component';
     FirstPageComponent,
     RecommendationsComponent,
     NavBarComponent,
-    LayoutComponent
+    LayoutComponent 
   ],
   imports: [
     BrowserModule,
