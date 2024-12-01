@@ -6,12 +6,10 @@
             <img src="assets/images/Synthonize.png" alt="Synthonize" class="overlay-image">
             <p class="slogan">Sintonizando sua mente com sua música</p>
             <div class="button-container">
-                <a routerLink="/recommendations" style='text-decoration: none'>
-                    <button class="login-button spotify-button">
-                        <img src="assets/images/spotify-icon.png" alt="Spotify Logo" class="button-icon">
-                        Login com Spotify
-                    </button>
-                </a>
+                <button class="login-button spotify-button" (click)="login()">
+                    <img src="assets/images/spotify-icon.png" alt="Spotify Logo" class="button-icon">
+                    Login com Spotify
+                </button>
             </div>
         </div>
     </div>

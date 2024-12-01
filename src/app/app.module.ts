@@ -10,6 +10,7 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { NavBarComponent } from './nav/nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
 import { LayoutComponent } from './layout/layout/layout.component';
 
 
@@ -28,6 +29,7 @@ import { LayoutComponent } from './layout/layout/layout.component';
     FormsModule, // Add FormsModule here
     NgMultiSelectDropDownModule.forRoot(),
     MatIconModule,
+    HttpClientModule,
     MatIcon
   ],
   providers: [

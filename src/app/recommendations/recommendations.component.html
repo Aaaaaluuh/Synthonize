@@ -1,16 +1,82 @@
+<div class="container-recommendation">
+  <div class="dropdown">
+    <h1>Recomendações</h1>
+    <p>Selecione até 5 gêneros musicais:</p>
+    <ng-multiselect-dropdown
+      [placeholder]="'Selecione os gêneros'"
+      [settings]="dropdownSettings"
+      [data]="dropdownList"
+      [(ngModel)]="selectedItems"
+      (onSelect)="onItemSelect($event)"
+      (onSelectAll)="onSelectAll($event)">
+    </ng-multiselect-dropdown>
+    <br>
 
-  <div class="container-recommendation">
+    <h2>Selecione as features:</h2>
+    <!-- Dançabilidade -->
+    <div class="features-container">
+      <p class="feature-name">Dançabilidade:</p>
+      <div class="info-button-container">
+        <button class="info-button">?</button>
+        <span class="tooltip">Indica o quão dançável a música é.</span>
+      </div>
+    </div>
+    <input type="range" min="0" max="100" [(ngModel)]="danceability">
+    <br>
 
-    <div class="dropdown">
-      <h1>Recomendações</h1>
-      <ng-multiselect-dropdown
-        [placeholder]="'custom placeholder'"
-        [settings]="dropdownSettings"
-        [data]="dropdownList"
-        [(ngModel)]="selectedItems"
-        (onSelect)="onItemSelect($event)"
-        (onSelectAll)="onSelectAll($event)">
-      </ng-multiselect-dropdown>
+    <!-- Energia -->
+    <div class="features-container">
+      <p class="feature-name">Energia:</p>
+      <div class="info-button-container">
+        <button class="info-button">?</button>
+        <span class="tooltip">Indica a intensidade e atividade. Normalmente, as faixas mais enérgicas são rápidas e barulhentas.</span>
+      </div>
+    </div>
+    <input type="range" min="0" max="100" [(ngModel)]="energy">
+    <br>
+
+    <!-- Instrumentalidade -->
+    <div class="features-container">
+      <p class="feature-name">Instrumentalidade:</p>
+      <div class="info-button-container">
+        <button class="info-button">?</button>
+        <span class="tooltip">Prevê se uma faixa não contém vocais (sons "Ooh" e "aah" são tratados como instrumentais neste contexto). Quanto mais alta a instrumentalidade, maior a probabilidade de a faixa não conter "vocalidade".</span>
+      </div>
+    </div>
+    <input type="range" min="0" max="100" [(ngModel)]="instrumentalness">
+    <br>
+
+    <!-- Valência -->
+    <div class="features-container">
+      <p class="feature-name">Valência:</p>
+      <div class="info-button-container">
+        <button class="info-button">?</button>
+        <span class="tooltip">Uma medida que descreve a positividade musical transmitida por uma faixa (músicas felizes, por exemplo, têm valências altas).</span>
+      </div>
+    </div>
+    <input type="range" min="0" max="100" [(ngModel)]="valence">
+    <br>
+
+    <!-- Botão para gerar recomendações -->
+    <button class="generate-button" (click)="onGenerateRecommendation()">Gerar Recomendações</button>
+
+    <!-- Exibição das músicas recomendadas -->
+    <div *ngIf="recommendedTracks.length > 0" class="additional-info">
+      <h2>Músicas Recomendadas:</h2>
+      <ul class="recommended-list">
+        <li *ngFor="let track of recommendedTracks" class="recommended-item">
+          <img [src]="track.album?.imagemUrl" alt="{{ track.album?.nome }}" class="album-image" />
+          <p>{{ track.name }}</p>
+          <p class="artist-name">{{ track.artists?.join(', ') }}</p>
+        </li>
+      </ul>
+      <br>
+
+      <!-- Formulário para criar a playlist -->
+      <p>Insira um nome para a Playlist:</p>
+      <input type="text" placeholder="Nome da Playlist" [(ngModel)]="playlistName">
+      <br>
+      <button class="generate-button" (click)="createPlaylist()">Criar Playlist</button>
+    </div>
   </div>
-
-  </div>
+</div>
